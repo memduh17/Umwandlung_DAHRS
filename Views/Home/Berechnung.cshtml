@@ -1,0 +1,32 @@
+﻿@model Umwandlung_DAHRS.Models.Betrag
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Berechnung</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+
+</head>
+<body>
+
+    <div class="text-center p-2 bg-transparent">
+        <h2 class="text-center">
+            Wie viel Cent wollen Sie umwandeln?
+        </h2>
+
+    </div>
+    <form asp-action="Berechnung" method="post">
+        <div>
+            <label asp-for="betrag"> Betrag:</label>
+            <input asp-for="betrag" />
+        </div>
+        <button type="submit"> Submit </button>
+    </form>
+    <div class="text-center">
+
+        <img class= src="~/css/wahrung.jpg" width="1200" height="800" />
+
+    </div>
+
+</body>
+</html>

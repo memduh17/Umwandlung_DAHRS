@@ -1,0 +1,85 @@
+﻿@model Umwandlung_DAHRS.Models.Betrag
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Umwandlung</title>
+</head>
+<body>
+    <div>
+        <h1>Umrechnung,für @Model?.betrag Euro</h1>
+        @{
+            DAHRS.Umwandlung(Model);
+        }
+        <form asp-action="Umwandlung" method="post" class="m-2">
+            <div class="form-group">
+                <label asp-for="@DAHRS.d" class="form-label">Anzahl der Dorsch:         </label>
+                <input asp-for="@DAHRS.d" class="form-control" />
+                @for (int i = 0; i < DAHRS.d; i++)
+                {
+                    <img class="text-center" src="~/css/dorsch.jpg" width="150" height="100" />
+                }
+
+                <br />
+                <br />
+                <br />
+
+            </div>
+            <div class="form-group">
+                <label asp-for="@DAHRS.r" class="form-label">Anzahl der Rochen:        </label>
+                <input asp-for="@DAHRS.r" class="form-control" />
+                @for (int i = 0; i < DAHRS.r; i++)
+                {
+                    <img class="text-center" src="~/css/rochen.jpg" width="150" height="100" />
+                }
+
+                <br />
+                <br />
+                <br />
+            </div>
+            <div class="form-group">
+                <label asp-for="@DAHRS.a" class="form-label">Anzahl der Aal:        </label>
+                <input asp-for="@DAHRS.a" class="form-control" />
+                @for (int i = 0; i < DAHRS.a; i++)
+                {
+                    <img class="text-center" src="~/css/aal.jpg" width="150" height="100" />
+                }
+
+                <br />
+                <br />
+                <br />
+            </div>
+            <div class="form-group">
+                <label asp-for="@DAHRS.h" class="form-label">Anzahl der Hering:        </label>
+                <input asp-for="@DAHRS.h" class="form-control" />
+                @for (int i = 0; i < DAHRS.h; i++)
+                {
+                    <img class="text-center" src="~/css/hering.jpg" width="150" height="100" />
+                }
+
+                <br />
+                <br />
+                <br />
+            </div>
+            <div class="form-group">
+                <label asp-for="@DAHRS.s" class="form-label">Anzahl der Sprotte:        </label>
+                <input asp-for="@DAHRS.s" class="form-control" />
+                @for (int i = 0; i < DAHRS.s; i++)
+                {
+                    <img class="text-center" src="~/css/sprotte.jpg" width="150" height="100" />
+                }
+
+                <br />
+                <br />
+                <br />
+            </div>
+        </form>
+
+
+    </div>
+
+</body>
+</html>
